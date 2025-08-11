@@ -1,0 +1,111 @@
+site_name: Stylus - Automated Comic Book Design Workflow
+site_description: AI-driven comic generation from text using multi-agent pipeline
+site_author: Allen Amos-Binks
+site_url: https://albinks.github.io/stylus
+
+repo_name: albinks/stylus
+repo_url: https://github.com/albinks/stylus
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: false
+            merge_init_into_class: true
+  - mermaid2:
+      arguments:
+        theme: base
+        themeVariables:
+          primaryColor: '#9c27b0'
+          primaryTextColor: '#ffffff'
+  - mkdocs-jupyter:
+      execute: false
+      allow_errors: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Agent Pipeline: architecture/agents.md
+    - Data Schemas: architecture/schemas.md
+    - Context Management: architecture/context.md
+  - API Reference:
+    - Agents: api/agents.md
+    - Schemas: api/schemas.md
+    - Core: api/core.md
+  - Tutorials:
+    - Basic Usage: tutorials/basic-usage.ipynb
+    - Custom Styles: tutorials/custom-styles.ipynb
+    - Advanced Features: tutorials/advanced-features.ipynb
+  - Development:
+    - Contributing: development/contributing.md
+    - Development Setup: development/setup.md
+    - Testing: development/testing.md
+    - Release Process: development/releases.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/albinks/stylus
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/stylus/
+  version:
+    provider: mike
+
+extra_css:
+  - stylesheets/extra.css
+
+watch:
+  - stylus/
