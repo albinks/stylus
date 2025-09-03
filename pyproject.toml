@@ -162,7 +162,6 @@ match = "(main|master)"
 prerelease = false
 
 [tool.semantic_release.changelog]
-template_dir = "templates"
 exclude_commit_patterns = [
     "^chore",
     "^ci",
