@@ -45,6 +45,8 @@ jobs:
       run: poetry install --with docs
 
     - name: Build documentation
+      env:
+        JUPYTER_PLATFORM_DIRS: 1
       run: |
         poetry run mkdocs build --strict
 
