@@ -10,6 +10,14 @@ Ready to begin implementing the foundational agent classes, context management s
 
 ## Recent Changes
 
+### Release Workflow Fix (Just Completed)
+- ✅ **Fixed**: GitHub Actions release workflow with proper error handling and debugging
+- ✅ **Updated**: python-semantic-release from v10.3.1 to v9.8.3 for better stability
+- ✅ **Added**: Conditional PyPI publishing based on token availability
+- ✅ **Added**: Comprehensive debug output and workflow summaries
+- ✅ **Added**: Test PyPI publishing step for safe testing
+- ✅ **Created**: Complete release setup documentation guide
+
 ### Complete Infrastructure Implementation (Completed)
 - ✅ **Completed**: Full Python package structure with stylus/agents/, stylus/schemas/, stylus/core/
 - ✅ **Completed**: Poetry configuration with comprehensive dependency management (dev, docs, test groups)

@@ -153,18 +153,23 @@ version_variables = [
     "stylus/__init__.py:__version__",
 ]
 build_command = "poetry build"
-dist_glob_patterns = ["dist/*"]
 upload_to_vcs_release = true
+tag_format = "v{version}"
+branch = "main"
+commit_message = "chore(release): {version} [skip ci]\n\n{changelog}"
+commit_author = "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
 
 [tool.semantic_release.branches.main]
 match = "(main|master)"
-prerelease_token = "rc"
 prerelease = false
 
 [tool.semantic_release.changelog]
-template_dir = "templates"
 changelog_file = "CHANGELOG.md"
-exclude_commit_patterns = []
+exclude_commit_patterns = [
+    "^chore",
+    "^ci",
+    "^Merge",
+]
 
 [tool.semantic_release.commit_parser_options]
 allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
@@ -173,6 +178,7 @@ patch_tags = ["fix", "perf"]
 
 [tool.semantic_release.remote]
 name = "origin"
+type = "github"
 token = { env = "GH_TOKEN" }
 
 [tool.commitizen]
