@@ -73,28 +73,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quickstart.md
-    - Configuration: getting-started/configuration.md
-  - Architecture:
-    - Overview: architecture/overview.md
-    - Agent Pipeline: architecture/agents.md
-    - Data Schemas: architecture/schemas.md
-    - Context Management: architecture/context.md
-  - API Reference:
-    - Agents: api/agents.md
-    - Schemas: api/schemas.md
-    - Core: api/core.md
-  - Tutorials:
-    - Basic Usage: tutorials/basic-usage.ipynb
-    - Custom Styles: tutorials/custom-styles.ipynb
-    - Advanced Features: tutorials/advanced-features.ipynb
   - Development:
-    - Contributing: development/contributing.md
-    - Development Setup: development/setup.md
-    - Testing: development/testing.md
-    - Release Process: development/releases.md
+    - Release Setup: release-setup.md
 
 extra:
   social:

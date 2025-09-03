@@ -81,7 +81,7 @@ jobs:
 
       - name: Python Semantic Release
         id: release
-        uses: python-semantic-release/python-semantic-release@v9.8.3
+        uses: python-semantic-release/python-semantic-release@v10.3.1
         with:
           github_token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
           git_committer_name: "github-actions[bot]"
@@ -99,7 +99,11 @@ jobs:
         if: steps.release.outputs.released == 'true'
         run: |
           echo "Building package for release..."
+          echo "Activating Poetry environment and building..."
+          source .venv/bin/activate
           poetry build
+          echo "Build completed successfully"
+          ls -la dist/
 
       - name: Check PyPI token availability
         id: check-pypi

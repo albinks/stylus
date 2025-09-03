@@ -100,11 +100,11 @@ Generate unique visual content that stands out in crowded social media feeds.
 
 ## 📚 Documentation
 
-- [**Getting Started**](getting-started/installation.md) - Installation and setup
-- [**Architecture**](architecture/overview.md) - System design and patterns
-- [**API Reference**](api/agents.md) - Complete API documentation
-- [**Tutorials**](tutorials/basic-usage.ipynb) - Interactive examples
-- [**Development**](development/contributing.md) - Contributing guidelines
+- **Getting Started** - Installation and setup
+- **Architecture** - System design and patterns
+- **API Reference** - Complete API documentation
+- **Tutorials** - Interactive examples
+- **Development** - Contributing guidelines
 
 ## 🤝 Contributing
 
@@ -115,7 +115,7 @@ Stylus is designed for community collaboration with:
 - **Quality Gates** - Automated testing and code quality checks
 - **Hackathon-Friendly** - Perfect for AI/creative coding events
 
-See our [Contributing Guide](development/contributing.md) to get started.
+See our Contributing Guide to get started.
 
 ## 📄 License
 
@@ -123,4 +123,4 @@ Stylus is released under the [MIT License](https://github.com/albinks/stylus/blo
 
 ---
 
-**Ready to create your first comic?** Check out our [Quick Start Guide](getting-started/quickstart.md) or explore the [Interactive Tutorials](tutorials/basic-usage.ipynb).
+**Ready to create your first comic?** Check out our Quick Start Guide or explore the Interactive Tutorials.
