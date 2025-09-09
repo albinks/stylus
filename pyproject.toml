@@ -154,7 +154,7 @@ version_variables = [
     "stylus/__init__.py:__version__",
 ]
 tag_format = "v{version}"
-commit_message = "chore(release): {version} [skip ci]\n\n{changelog}"
+commit_message = "chore(release): {version} [skip ci]"
 commit_author = "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
 
 [tool.semantic_release.branches.main]

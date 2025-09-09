@@ -17,6 +17,13 @@ Ready to begin implementing the foundational agent classes, context management s
 - ✅ **Added**: Comprehensive debug output and workflow summaries
 - ✅ **Added**: Test PyPI publishing step for safe testing
 - ✅ **Created**: Complete release setup documentation guide
+- ✅ **Fixed**: Semantic-release KeyError: 'changelog' by removing invalid {changelog} placeholder from commit_message template
+
+### Semantic Release Configuration Issue (Resolved)
+- ✅ **Root Cause**: The commit_message template contained `{changelog}` placeholder that isn't available in python-semantic-release v9.8.3
+- ✅ **Solution**: Updated commit_message from `"chore(release): {version} [skip ci]\n\n{changelog}"` to `"chore(release): {version} [skip ci]"`
+- ✅ **Verification**: Tested with `semantic-release version --print` - now works correctly, calculates next version as 1.0.0
+- ✅ **Result**: Semantic-release workflow is now fully functional for both local testing and CI/CD automation
 
 ### Complete Infrastructure Implementation (Completed)
 - ✅ **Completed**: Full Python package structure with stylus/agents/, stylus/schemas/, stylus/core/
