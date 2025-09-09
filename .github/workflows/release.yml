@@ -79,6 +79,12 @@ jobs:
           echo "Git tags:"
           git tag -l || echo "No tags found"
 
+      - name: Configure Git Authentication
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}@github.com/albinks/stylus.git
+
       - name: Python Semantic Release
         id: release
         uses: python-semantic-release/python-semantic-release@v9.8.3
