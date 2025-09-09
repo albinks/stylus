@@ -45,7 +45,7 @@ pytest-cov = "^4.1.0"
 hypothesis = "^6.88.0"
 safety = "^2.3.0"
 bandit = "^1.7.0"
-python-semantic-release = "^10.3.1"
+python-semantic-release = "^9.8.3"
 commitizen = "^3.12.0"
 
 [tool.poetry.group.docs.dependencies]
@@ -167,8 +167,6 @@ exclude_commit_patterns = [
     "^ci",
     "^Merge",
 ]
-
-[tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.md"
 
 [tool.semantic_release.commit_parser_options]
